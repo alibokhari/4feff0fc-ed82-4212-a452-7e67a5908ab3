@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NumberSequence": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
