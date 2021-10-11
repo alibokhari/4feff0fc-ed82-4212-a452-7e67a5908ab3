@@ -23,3 +23,14 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+  lint:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Super-Linter
+      uses: github/super-linter@v4.8.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
