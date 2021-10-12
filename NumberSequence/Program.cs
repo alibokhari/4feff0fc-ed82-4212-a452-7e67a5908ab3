@@ -3,27 +3,19 @@ using System.Linq;
 
 namespace NumberSequence
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             try
             {
                 var generator = new NumberSequenceGenerator();
-
-                if (args.Any())
+                Console.WriteLine("Please enter single white space separated numbers string:");
+                while (true)
                 {
-                    Console.WriteLine($"Output: { generator.FirstLongestIncreasingSequence(args.ToString())}");
-                }
-                else
-                {
-                    Console.WriteLine("Please enter single white space separated numbers string:");
-                    while (true)
-                    {
-                        var input = Console.ReadLine();
-                        var output = generator.FirstLongestIncreasingSequence(input);
-                        Console.WriteLine($"Output: { output }");
-                    }
+                    var input = Console.ReadLine();
+                    var output = generator.FirstLongestIncreasingSequence(input);
+                    Console.WriteLine($"Output: { output }");
                 }
             }
             catch (Exception ex)
